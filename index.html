@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THE GRAND LUXE MALL | Multi-Brand Mall</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+  <div class="logo">THE GRAND <span>LUXE MALL</span></div>
+  <nav>
+    <a onclick="scrollToId('home')">Home</a>
+    <a onclick="scrollToId('directory')">Directory</a>
+    <a onclick="scrollToId('ladies')">Ladies</a>
+    <a onclick="scrollToId('gents')">Gents</a>
+    <a onclick="scrollToId('food')">Food Court</a>
+    <a onclick="scrollToId('reviews')">Reviews</a>
+    <a onclick="scrollToId('contact')">Contact</a>
+  </nav>
+  <div><span class="badge" id="cartCount">0 CART</span></div>
+</header>
+
+<div id="home" class="hero">
+  <h1>Pakistan's First <i>AI Luxury Mall</i><br>50+ Brands Under One Roof</h1>
+  <div class="ai-bar">
+    <input id="aiInput" placeholder="AI Concierge: e.g. 'Lawn suit under 5000'...">
+    <button onclick="aiSearch()">Ask AI</button>
+  </div>
+  <div id="aiResult"></div>
+</div>
+
+<div id="directory" class="section">
+  <h2>Store Directory - 50+ Brands</h2>
+  <div class="filter">
+    <button class="active" onclick="filterBrands('all',this)">All</button>
+    <button onclick="filterBrands('ladies',this)">Ladies</button>
+    <button onclick="filterBrands('gents',this)">Gents</button>
+    <button onclick="filterBrands('food',this)">Food</button>
+    <button onclick="filterBrands('luxury',this)">Luxury</button>
+  </div>
+  <div class="grid" id="brandGrid"></div>
+</div>
+
+<div id="ladies" class="section light"><h2>Ladies Collection - Unstitched</h2><div class="grid" id="ladiesGrid"></div></div>
+<div id="gents" class="section"><h2>Gents Collection - Unstitched</h2><div class="grid" id="gentsGrid"></div></div>
+
+<div id="food" class="section"><h2>Food Court & Cinema</h2>
+  <div class="grid">
+    <div class="brand-card"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=500"><h4>McDonald's - GF-12</h4></div>
+    <div class="brand-card"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=500"><h4>Cheezious - FF-05</h4></div>
+    <div class="brand-card"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500"><h4>Butt Karahi - GF-20</h4></div>
+    <div class="brand-card"><img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?w=500"><h4>Coffee Planet - 2F-01</h4></div>
+  </div>
+</div>
+
+<div id="reviews" class="section"><h2>Customer Reviews</h2>
+  <div class="review-grid">
+    <div class="review"><b>★★★★★</b><p>Best mall website! Found my brand in 2 seconds.</p><small>- Ayesha, Lahore</small></div>
+    <div class="review"><b>★★★★★</b><p>AI found me lawn under 5000 from 5 brands.</p><small>- Hamza, Multan</small></div>
+    <div class="review"><b>★★★★★</b><p>Parking booking saved my time.</p><small>- Ali, Karachi</small></div>
+  </div>
+</div>
+
+<div id="order" class="section light"><h2 style="text-align:center">Customer Order Section</h2>
+  <div class="order-box">
+    <div id="cartList"></div>
+    <input id="cName" placeholder="Full Name"><input id="cPhone" placeholder="Phone">
+    <input id="cAddress" placeholder="Address">
+    <button onclick="placeOrder()">Place Order via WhatsApp</button>
+  </div>
+</div>
+
+<div id="contact" class="section"><h2>Contact</h2>
+  <p>grandluxemall@gmail.com | +92 300 0000000</p>
+  <a href="https://wa.me/923000000000" class="wa-btn">WhatsApp</a>
+  <a href="mailto:grandluxemall@gmail.com" class="mail-btn">Email</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+  </html>
